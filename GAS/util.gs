@@ -1,25 +1,25 @@
-//ŒŸõ “®‰æ
+ï»¿//æ¤œç´¢ å‹•ç”»
 const searchVideo = (searchText) => {
   const youtube = YouTube.Search.list("snippet", { q: searchText, maxResults: 1, safeSearch: "strict", type: "video" });
   const item = youtube.items[0];
   return { main: { id: item.id.videoId, title: item.snippet.title }, data: { thumbnail: item.snippet.thumbnails.high.url } };
 }
 
-//ŒŸõ ƒvƒŒƒCƒŠƒXƒg
+//æ¤œç´¢ ãƒ—ãƒ¬ã‚¤ãƒªã‚¹ãƒˆ
 const searchList = (searchText) => {
   const youtube = YouTube.Search.list("snippet", { q: searchText, maxResults: 1, safeSearch: "strict", type: "playlist" });
   const item = youtube.items[0];
   return getList(item.id.playlistId);
 }
 
-//î•ñ•\¦ “®‰æ
+//æƒ…å ±è¡¨ç¤º å‹•ç”»
 const getVideo = (videoId) => {
   const youtube = YouTube.Videos.list("snippet,contentDetails", { id: videoId });
   const item = youtube.items[0];
   return { main: { id: item.id, title: item.snippet.title }, data: { thumbnail: item.snippet.thumbnails.high.url, duration: item.contentDetails.duration } };
 }
 
-//î•ñ•\¦ ƒvƒŒƒCƒŠƒXƒg
+//æƒ…å ±è¡¨ç¤º ãƒ—ãƒ¬ã‚¤ãƒªã‚¹ãƒˆ
 const getList = (listId) => {
   const youtube = YouTube.PlaylistItems.list("snippet,contentDetails", { playlistId: listId, pageToken: "" });
   let result = [];

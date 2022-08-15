@@ -1,2 +1,2 @@
-# Google Apps Script
-ƒ‰ƒCƒuƒ‰ƒŠ YouTube Data API v3
+ï»¿# Google Apps Script
+ãƒ©ã‚¤ãƒ–ãƒ©ãƒª YouTube Data API v3

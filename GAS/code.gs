@@ -1,24 +1,24 @@
-function doGet(e) {
+ï»¿function doGet(e) {
   const p = e.parameter;
   let result = {};
   result.error = false;
   try {
-    //ŒŸõ “®‰æ
+    //æ¤œç´¢ å‹•ç”»
     if (p.searchVideo != null) {
       result.searchVideo = searchVideo(p.searchVideo);
     }
 
-    //ŒŸõ ƒvƒŒƒCƒŠƒXƒg
+    //æ¤œç´¢ ãƒ—ãƒ¬ã‚¤ãƒªã‚¹ãƒˆ
     if (p.searchList != null) {
       result.searchList = searchList(p.searchList);
     }
 
-    //î•ñ•\¦ “®‰æ
+    //æƒ…å ±è¡¨ç¤º å‹•ç”»
     if (p.getVideo != null) {
       result.getVideo = getVideo(p.getVideo);
     }
 
-    //î•ñ•\¦ ƒvƒŒƒCƒŠƒXƒg
+    //æƒ…å ±è¡¨ç¤º ãƒ—ãƒ¬ã‚¤ãƒªã‚¹ãƒˆ
     if (p.getList != null) {
       result.getList = getList(p.getList);
     }
